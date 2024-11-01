@@ -37,4 +37,20 @@ models:
           - relationships:
               to: ref('stg_jaffle_shop__customers')
               field: customer_id
+
+  - name: stg_jaffle_shop__employees
+    description: Staged employee data from our jaffle shop app
+    columns:
+      - name: employee_id
+        description: Primary key for employees.
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Foreign key to stg_customers.customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_jaffle_shop__customers')
+              field: customer_id
               

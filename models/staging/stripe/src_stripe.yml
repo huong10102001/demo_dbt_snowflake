@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: stripe
-    database: raw
-    schema: stripe
+    database: airbyte_database
+    schema: airbyte_schema
     tables:
-      - name: payment
+      - name: payments
       
